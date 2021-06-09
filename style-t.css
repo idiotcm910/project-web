@@ -1,0 +1,440 @@
+:root{
+    --color-header: #ffff;
+    --color-header-subnav: #0000;
+    --color-header-hover-text: black;
+    --color-header-hover-background: #cccccc;
+    --font-style-default: 15px;
+    --padding-element: 64px 16px;
+}
+
+html{
+    font-family: 'Lato', sans-serif;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* 
+========= HEADER ======== */
+
+
+#header{
+    background-color: #000;
+    height: 46px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+/* 
+====== Nav in header */
+#header .nav{
+    float: left;
+    margin-left: -40px;
+}
+#header .nav > li{
+    display: inline-block;
+    position: relative;
+}
+#header .nav > li > a{
+    color: var(--color-header);
+    font-size: var(--font-style-default);
+    text-transform: uppercase;
+    padding: 14px 24px;
+    line-height: 46px;
+}
+
+#header .nav nav-down{
+    font-size: 12px;
+}
+
+/* ===== > SUB nav in header */
+#header .nav .subnav{
+    position: absolute;
+    left: -40px;
+    display: none;
+}
+
+#header .nav .subnav li{
+    display: inherit;
+    background-color: var(--color-header);
+    width: 160px;
+}
+
+#header .nav .subnav li a{
+    font-size: var(--font-style-default);
+    padding: 8px 16px;
+    display: inherit;
+    font-weight: 400;
+    line-height: 46px;
+    color: #000;
+}
+
+/* ====== button search in header */
+#header .btn-nav{
+    float: right;
+    padding: 12px 24px;
+    font-size: 18px;
+    height: 100%;
+}
+#header .btn-nav .nav-search{
+    color: var(--color-header);
+}
+
+/* RESPONSIVE MOBLIE NAV HEADER */
+#header .nav-respon-moblie{
+    float: left;
+    padding: 12px 24px;
+    font-size: 18px;
+    color: #ffff;
+    display: none;
+    height: 100%;
+}
+
+#header .nav-respon-pc{
+    display: inline-block;
+}
+
+/* HOVER NAVAGATION */
+#header .nav > li:hover > a,
+#header .nav .subnav li:hover a{
+    color: var(--color-header-hover-text);
+    background-color: var(--color-header-hover-background);
+    border-radius: 3px;
+}
+
+#header .nav li:hover .subnav{
+    display: block;
+}
+
+#header .btn-nav:hover,
+#header .nav-respon-moblie:hover{
+    background-color: #f44336;
+}
+
+/* slider */
+#slider{
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('https://www.w3schools.com/w3images/la.jpg') top center / cover no-repeat;
+    position: relative;
+}
+
+/* content in slider */
+#slider .content{
+    position: absolute;
+    bottom: 0;
+    color: #ffff;
+    padding: 32px 16px;
+    text-align: center;
+    width: 100%;
+}
+#slider .content .content-header{
+    margin: 10px 0px;
+}
+#slider .content .content-description{
+    margin: 15px 0px;
+}
+
+
+/* =========================================CONTENT============================= */
+
+.content-section .content-heading{
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px; /* khoang cach giua cac chu cai */
+    text-align: center;
+}
+
+.content-section .content-sub-heading{
+    margin: 15px 0px;
+    text-align: center;
+    font-size: var(--font-style-default);
+    font-style: italic;
+    opacity: 0.5; /* do mong cua mau */
+}
+
+/* ------------------ABOUT------------------- */
+
+/* var default color for ABOUT*/
+:root{
+    --color-heading-content: #000;
+    --color-background-content: #ffff;
+}
+
+.main-about{
+    background-color: #fff;
+}
+.about{
+    padding: 64px 0;
+}
+.about .content-heading,
+.about .content-sub-heading{
+    color: var(--color-heading-content);
+}
+.about .text{
+    margin: 15px 0px; 
+    text-align: justify;
+    line-height: 1.5;
+    font-size: var(--font-style-default);
+    color: var(--color-heading-content);
+}
+
+.about .about-team{
+    margin: 40px 0 0 0;
+}
+
+.about .about-team .name-member{
+    text-align: center;
+    font-size: var(--font-style-default);
+    padding: 15px 0px;
+}
+
+.about .about-team img{
+    width: 100%;
+}
+
+
+/* ------------------TOUR------------------- */
+.main-tour{
+    background-color: #000;
+}
+
+.tour{
+    padding: 64px 0px;
+}
+
+.tour .content-heading,
+.tour .content-sub-heading{
+    color: #ffff;
+}
+
+.tour .time{
+    background-color: #ffff;
+}
+
+.tour .time li{
+    list-style-type: none;
+    padding: 12px 16px;
+    font-size: var(--font-style-default);
+    border-bottom: 1px solid #cccc;
+    color: #757575;
+}
+
+.tour .time li span{
+    margin-left: 16px;
+    padding: 0px 8px;
+    background-color: #f44336;
+    color: #ffff;
+    opacity: 1;
+}
+
+.tour .time li:first-child{
+    margin-top: 50px;
+}
+
+.tour .time li:last-child span{
+    background-color: #000;
+    float: right;
+    border-radius: 50%;
+}
+
+.tour .tour-list{
+    margin: 20px -10px;
+}
+
+.tour .tour-list .tour-items{
+    padding: 0 10px;
+}
+
+.tour .tour-items img{
+    width: 100%;
+    display: block;
+}
+
+.tour .tour-place{
+    padding: 16px 16px;
+    font-style: var(--font-style-default);
+    background-color: #ffff;
+}
+
+.tour .tour-place .place-heading{
+    font-weight: bold;
+}
+.tour .tour-place .place-time{
+    opacity: 0.5;
+    margin: 15px 0px;
+}
+.tour .tour-place .place-text{
+    margin: 15px 0px;
+    line-height: 1.5;
+}
+
+
+.tour .tour-place .btn{
+    display: inline-block;
+    padding: 10px;
+    background-color: #000;
+    color: #ffff;
+    border-radius: 5px;
+}
+
+
+/* ------------------CONTACT------------------- */
+/* var default color for CONTACT*/
+:root{
+    --color-heading-contact: #000;
+    --color-background-contact: #ffff;
+}
+
+.main-contact{
+    background-color: #ffff;
+}
+
+.contact{
+    padding: 64px 0px;
+}
+
+.contact .content-heading,
+.contact .content-sub-heading{
+    color: var(--color-heading-content);
+}
+
+.contact .contact-info{
+    margin: 40px 0 0 0;
+}
+
+.contact .info-address{
+    line-height: 1.5;
+    font-size: 18px;
+    color: #000;
+}
+
+.contact .info-address i{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.contact .form > div{
+    width: calc((100% - 16px) / 2);
+    float: left;
+}
+
+.contact .form > div:nth-child(1){
+    margin-right: 16px;
+}
+
+.contact .form .form-input{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cccccc; 
+    color: #75758b;
+    font-size: 15px;
+}
+
+.contact .form > .form-input{
+    margin-top: 15px;
+}
+
+.contact .contact-info .form-btn{
+    float: right;
+    margin: 16px 0px;
+    padding: 8px 16px;
+    color: #ffff;
+    font-style: var(--font-style-default);
+    font-size: 15px;
+    text-transform: uppercase;
+    background-color: #000;
+    border-radius: 5px;
+}
+
+@media (max-width: 739px){
+    :root{
+        --font-style-default: 18px;
+    }
+    /* -------------CONTENT-SECTION------ */
+    .content-section .content-heading{
+        font-size: 40px;
+    }
+
+    .content-section .content-sub-heading{
+        font-size: 18px;
+    }
+
+
+    /* --------------------HEADER------------ */
+    #header{
+        height: 50px;
+        text-align: justify;
+    }
+    #header .nav-respon-moblie{
+        display: inline-block;
+    }
+    #header .nav-respon-pc{
+        display: none;
+    }
+
+    /* -----------------SLIDER---------- */
+    #slider .content{
+        display: none;
+    }
+
+    /* -----------------ABOUT----------- */
+    .about .text{
+        line-height: 1.6;
+        padding: 0 16px;
+    }
+    .about .member{
+        margin-top: 15px;
+    }
+
+    /* ------------TOUR------------ */
+    .tour .time li{
+        padding: 24px 32px;
+    }
+
+    .tour .tour-list{
+        margin-top: 20px;
+    }
+
+    .tour .tour-list .tour-items{
+        padding: 0;
+    }
+
+    .tour .tour-place p{
+        text-align: center;
+    }
+    .tour .tour-place .btn{
+        width: 100%;
+        text-align: center;
+    }
+
+    /* -----------CONTACT--------- */
+    .contact .contact-info{
+        padding: 0 16px;
+    }
+    .contact .info-address{
+        text-align: center;
+    }
+
+    .contact .info-address i{
+        margin: 0;
+    }
+
+    .contact .info-send{
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .contact .info-send .form-btn{
+        width: 100%;
+    }
+
+}
